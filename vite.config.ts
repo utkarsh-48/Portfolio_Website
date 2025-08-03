@@ -15,19 +15,19 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Set base path for GitHub Pages (if needed)
+  base: process.env.NODE_ENV === "production" ? "/" : "/",
   build: {
     // Enhanced minification
     minify: "terser",
     terserOptions: {
       compress: {
-        drop_console: true, // Removes console.log statements
+        drop_console: mode === "production", // Only drop console in production
         drop_debugger: true, // Removes debugger statements
-        pure_funcs: [
-          "console.log",
-          "console.info",
-          "console.debug",
-          "console.warn",
-        ],
+        pure_funcs:
+          mode === "production"
+            ? ["console.log", "console.info", "console.debug", "console.warn"]
+            : [],
       },
       mangle: {
         // Mangle variable names
@@ -49,7 +49,7 @@ export default defineConfig(({ mode }) => ({
             return "vendor";
           }
         },
-        // Apply obfuscation to chunks
+        // Apply obfuscation to chunks only in production
         plugins:
           mode === "production"
             ? [

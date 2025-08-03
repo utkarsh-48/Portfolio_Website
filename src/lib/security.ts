@@ -42,54 +42,61 @@ export const disableDevToolsShortcuts = () => {
 };
 
 /**
- * Enhanced developer tools detection
+ * Enhanced developer tools detection - Less aggressive for production
  */
 export const enhancedDevToolsDetection = () => {
-  let devtools = {
-    open: false,
-    orientation: null as string | null,
-  };
+  // Only run in development or if explicitly enabled
+  if (import.meta.env.DEV) {
+    let devtools = {
+      open: false,
+      orientation: null as string | null,
+    };
 
-  const threshold = 160;
+    const threshold = 160;
 
-  setInterval(() => {
-    const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-    const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+    setInterval(() => {
+      const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+      const heightThreshold =
+        window.outerHeight - window.innerHeight > threshold;
 
-    if (widthThreshold || heightThreshold) {
-      if (!devtools.open) {
-        devtools.open = true;
-        devtools.orientation = widthThreshold ? "vertical" : "horizontal";
-        document.body.innerHTML =
-          "Developer tools are not allowed on this site.";
+      if (widthThreshold || heightThreshold) {
+        if (!devtools.open) {
+          devtools.open = true;
+          devtools.orientation = widthThreshold ? "vertical" : "horizontal";
+          // Don't break the entire app, just show a warning
+          console.warn("Developer tools detected");
+        }
+      } else {
+        devtools.open = false;
+        devtools.orientation = null;
       }
-    } else {
-      devtools.open = false;
-      devtools.orientation = null;
-    }
-  }, 500);
+    }, 500);
 
-  // Additional detection methods
-  const detectDevTools = () => {
-    const start = performance.now();
-    debugger;
-    const end = performance.now();
+    // Additional detection methods
+    const detectDevTools = () => {
+      const start = performance.now();
+      debugger;
+      const end = performance.now();
 
-    if (end - start > 100) {
-      document.body.innerHTML = "Developer tools are not allowed on this site.";
-    }
-  };
+      if (end - start > 100) {
+        console.warn("Developer tools detected");
+      }
+    };
 
-  setInterval(detectDevTools, 1000);
+    setInterval(detectDevTools, 1000);
+  }
 };
 
 /**
  * Initialize all security measures
  */
 export const initializeSecurity = () => {
-  disableContextMenu();
-  disableDevToolsShortcuts();
-  enhancedDevToolsDetection();
+  // Only apply strict security in development
+  if (import.meta.env.DEV) {
+    disableContextMenu();
+    disableDevToolsShortcuts();
+    enhancedDevToolsDetection();
+  }
 
   // Disable console in production
   if (import.meta.env.PROD) {
