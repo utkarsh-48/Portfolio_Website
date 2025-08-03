@@ -136,7 +136,7 @@ const COMMANDS = {
           <span className="terminal-warning">• Python</span>
           <span className="terminal-warning">• JavaScript</span>
           <span className="terminal-warning">• TypeScript</span>
-          <span className="terminal-warning">• C++</span>
+          <span className="terminal-warning">• C</span>
           <span className="terminal-warning">• Java</span>
           <span className="terminal-warning">• SQL</span>
         </div>
@@ -168,7 +168,7 @@ const COMMANDS = {
 
       <div className="mb-2">
         <h3 className="terminal-success font-bold mb-2">
-          Hardware & Robotics:
+          Hardware & Robotics(Planned):
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 ml-4">
           <span className="terminal-purple">• Arduino</span>
@@ -191,19 +191,19 @@ const COMMANDS = {
         <div>
           <span className="terminal-warning">GitHub:</span>
           <a
-            href="https://github.com/utkarsh"
+            href="https://github.com/utkarsh-48"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 terminal-blue hover:underline"
           >
-            github.com/utkarsh
+            github.com/utkarsh-48
           </a>
         </div>
 
         <div>
           <span className="terminal-warning">LinkedIn:</span>
           <a
-            href="https://linkedin.com/in/utkarsh"
+            href="www.linkedin.com/in/utkarsh-krishna48"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 terminal-blue hover:underline"
@@ -218,7 +218,7 @@ const COMMANDS = {
             href="mailto:utkarshthakur2602@gmail.com"
             className="ml-2 terminal-blue hover:underline"
           >
-            utkarsh@example.com
+            utkarshthakur2602@gmail.com
           </a>
         </div>
 
