@@ -63,67 +63,114 @@ const COMMANDS = {
       </p>
     </div>
   ),
-  
   projects: () => (
     <div className="terminal-output">
       <p className="mb-3 terminal-success">
-        Here are some projects I've been working on:
+        Here are some projects I'm working on and planning:
       </p>
-
+  
+      {/* Terminal Portfolio */}
       <div className="mb-4">
-        <h3 className="terminal-warning font-bold">• Smart Home Assistant</h3>
-        <p className="ml-4">
-          IoT-based home automation with voice control and ML predictions
-        </p>
-        <p className="ml-4 text-sm terminal-gray">
-          Tech: Python, TensorFlow, Raspberry Pi, Arduino
-        </p>
-        <p className="ml-4">
-          <span className="terminal-blue">→</span>{" "}
-          github.com/utkarsh/smart-home-assistant
-        </p>
-      </div>
-
-      <div className="mb-4">
-        <h3 className="terminal-warning font-bold">• ML Stock Predictor</h3>
-        <p className="ml-4">
-          Real-time stock price prediction using LSTM neural networks
-        </p>
-        <p className="ml-4 text-sm terminal-gray">
-          Tech: Python, TensorFlow, Pandas, Streamlit
-        </p>
-        <p className="ml-4">
-          <span className="terminal-blue">→</span>{" "}
-          github.com/utkarsh/stock-predictor
-        </p>
-      </div>
-
-      <div className="mb-4">
-        <h3 className="terminal-warning font-bold">• Autonomous Game Bot</h3>
-        <p className="ml-4">
-          AI agent that learns to play games using reinforcement learning
-        </p>
-        <p className="ml-4 text-sm terminal-gray">
-          Tech: Python, OpenAI Gym, PyTorch, Computer Vision
-        </p>
-        <p className="ml-4">
-          <span className="terminal-blue">→</span> github.com/utkarsh/game-bot
-        </p>
-      </div>
-
-      <div className="mb-2">
-        <h3 className="terminal-warning font-bold">• Terminal Portfolio</h3>
-        <p className="ml-4">This very website you're using right now!</p>
+        <h3 className="terminal-warning font-bold">• Protfolio Website (Current)</h3>
+        <p className="ml-4">This site itself — built to feel like a real terminal</p>
         <p className="ml-4 text-sm terminal-gray">
           Tech: React, TypeScript, Tailwind CSS
         </p>
         <p className="ml-4">
           <span className="terminal-blue">→</span>{" "}
-          github.com/utkarsh/terminal-portfolio
+          <a
+            href="https://github.com/utkarsh-48/Portfolio_Website"
+            className="underline text-blue-400 hover:text-blue-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/utkarsh-48/terminal-portfolio
+          </a>
         </p>
       </div>
+  
+      {/* E-commerce Cart */}
+      <div className="mb-4">
+        <h3 className="terminal-warning font-bold">• E-commerce Cart (Completed)</h3>
+        <p className="ml-4">A simple cart system for managing orders and items</p>
+        <p className="ml-4 text-sm terminal-gray">Tech: Python (CLI-based)</p>
+        <p className="ml-4">
+          <span className="terminal-blue">→</span>{" "}
+          <a
+            href="https://github.com/utkarsh-48/ecommerce-cart-python"
+            className="underline text-blue-400 hover:text-blue-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/utkarsh-48/ecommerce-cart-python
+          </a>
+        </p>
+      </div>
+  
+      {/* Inventory Manager */}
+      <div className="mb-4">
+        <h3 className="terminal-warning font-bold">• Inventory Manager (Completed)</h3>
+        <p className="ml-4">CLI tool to manage stock, orders, and product listings</p>
+        <p className="ml-4 text-sm terminal-gray">Tech: Python (CLI-based)</p>
+        <p className="ml-4">
+          <span className="terminal-blue">→</span>{" "}
+          <a
+            href="https://github.com/utkarsh-48/Inventory_management"
+            className="underline text-blue-400 hover:text-blue-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/utkarsh-48/Inventory_management
+          </a>
+        </p>
+      </div>
+  
+      {/* ML Stock Predictor */}
+      <div className="mb-4">
+        <h3 className="terminal-warning font-bold">• ML Stock Predictor (In Progress)</h3>
+        <p className="ml-4">Real-time stock prediction using LSTM networks</p>
+        <p className="ml-4 text-sm terminal-gray">
+          Tech: Python, TensorFlow, Pandas, Streamlit
+        </p>
+        <p className="ml-4 terminal-info">→ Coming Soon</p>
+      </div>
+  
+      {/* Smart Home Assistant */}
+      <div className="mb-4">
+        <h3 className="terminal-warning font-bold">• Smart Home Assistant (Planned)</h3>
+        <p className="ml-4">Home automation with voice control and ML-based predictions</p>
+        <p className="ml-4 text-sm terminal-gray">
+          Tech: Python, TensorFlow, Raspberry Pi, Arduino
+        </p>
+        <p className="ml-4 terminal-info">→ Planned for Q2 2026</p>
+      </div>
+  
+      {/* Game Bot */}
+      <div className="mb-4">
+        <h3 className="terminal-warning font-bold">• Autonomous Game Bot (Planned)</h3>
+        <p className="ml-4">AI bot that learns to play simple games using RL</p>
+        <p className="ml-4 text-sm terminal-gray">
+          Tech: Python, OpenAI Gym, PyTorch, Computer Vision
+        </p>
+        <p className="ml-4 terminal-info">→ Planned for Q3 2026</p>
+      </div>
+  
+      {/* Robotics Project */}
+      <div className="mb-2">
+        <h3 className="terminal-warning font-bold">• Robotics Project (Planned)</h3>
+        <p className="ml-4">Autonomous robot with vision and basic path planning</p>
+        <p className="ml-4 text-sm terminal-gray">
+          Tech: ROS, Python, OpenCV, Arduino, 3D Printing
+        </p>
+        <p className="ml-4 terminal-info">→ Planned for Q4 2026</p>
+      </div>
+  
+      <p className="mt-4 terminal-gray text-sm">
+        Tip: I'm actively building and updating these. More to come soon.
+      </p>
     </div>
   ),
+  
   skills: () => (
     <div className="terminal-output">
       <div className="mb-4">
@@ -201,7 +248,7 @@ const COMMANDS = {
         <div>
           <span className="terminal-warning">LinkedIn:</span>
           <a
-            href="www.linkedin.com/in/utkarsh-krishna48"
+            href="https://www.linkedin.com/in/utkarsh-krishna-1a0210328/"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 terminal-blue hover:underline"
