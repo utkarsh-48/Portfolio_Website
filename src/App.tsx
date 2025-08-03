@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
-// import { initializeSecurity } from "@/lib/security";
+import { initializeSecurity } from "@/lib/security";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    // Initialize all security measures - DISABLED FOR TESTING
+    // Security measures disabled for deployment compatibility
     // initializeSecurity();
     console.log("App loaded successfully");
   }, []);
