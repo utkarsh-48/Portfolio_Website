@@ -37,35 +37,33 @@ const COMMANDS = {
   ),
   about: () => (
     <div className="terminal-output">
-      <p className="mb-2">Hey there!</p>
+      <p className="mb-2">Hey there.</p>
       <p className="mb-2">
-        I'm <span className="terminal-info">Utkarsh</span>, a passionate BCA
-        student from India.
+        I'm <span className="terminal-info">Utkarsh</span>, a BCA student from India.
       </p>
       <p className="mb-2">
-        Currently diving deep into the fascinating worlds of:
+        Right now, I'm focused on:
       </p>
       <ul className="list-disc list-inside ml-4 mb-2">
         <li>
-          <span className="terminal-success">Machine Learning</span> - Building
-          intelligent systems
+          <span className="terminal-success">Machine Learning</span> – building intelligent systems
         </li>
         <li>
-          <span className="terminal-warning">Robotics</span> - Creating the
-          future of automation
+          <span className="terminal-info">Web Development</span> – creating fast, accessible UIs
         </li>
       </ul>
       <p className="mb-2">
-        My goal is to become an{" "}
-        <span className="terminal-info">ML Ops Engineer</span> and work at the
-        intersection of AI and robotics.
+        Next, I plan to dive into <span className="terminal-warning">Robotics</span> and ML Ops to connect software, data, and automation.
+      </p>
+      <p className="mb-2">
+        Outside of tech, I enjoy reading and writing novels, riding my bike, and listening to music pretty much all the time.
       </p>
       <p>
-        When I'm not coding, you'll find me exploring new tech, contributing to
-        open source, or dreaming about robot companions!
+        I also like messing with new tools, contributing to open source, and thinking about how to build smarter systems.
       </p>
     </div>
   ),
+  
   projects: () => (
     <div className="terminal-output">
       <p className="mb-3 terminal-success">
@@ -168,7 +166,7 @@ const COMMANDS = {
 
       <div className="mb-2">
         <h3 className="terminal-success font-bold mb-2">
-          Hardware & Robotics(Planned):
+        Hardware & Robotics (next focus):
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 ml-4">
           <span className="terminal-purple">• Arduino</span>
@@ -208,7 +206,7 @@ const COMMANDS = {
             rel="noopener noreferrer"
             className="ml-2 terminal-blue hover:underline"
           >
-            linkedin.com/in/utkarsh
+            linkedin.com/in/utkarsh-krishna
           </a>
         </div>
 
