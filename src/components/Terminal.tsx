@@ -39,27 +39,32 @@ const COMMANDS = {
     <div className="terminal-output">
       <p className="mb-2">Hey there.</p>
       <p className="mb-2">
-        I'm <span className="terminal-info">Utkarsh</span>, a BCA student from India.
+        I'm <span className="terminal-info">Utkarsh</span>, a BCA student from
+        India.
       </p>
-      <p className="mb-2">
-        Right now, I'm focused on:
-      </p>
+      <p className="mb-2">Right now, I'm focused on:</p>
       <ul className="list-disc list-inside ml-4 mb-2">
         <li>
-          <span className="terminal-success">Machine Learning</span> – building intelligent systems
+          <span className="terminal-success">Machine Learning</span> – building
+          intelligent systems
         </li>
         <li>
-          <span className="terminal-info">Web Development</span> – creating fast, accessible UIs
+          <span className="terminal-info">Web Development</span> – creating
+          fast, accessible UIs
         </li>
       </ul>
       <p className="mb-2">
-        Next, I plan to dive into <span className="terminal-warning">Robotics</span> and ML Ops to connect software, data, and automation.
+        Next, I plan to dive into{" "}
+        <span className="terminal-warning">Robotics</span> and ML Ops to connect
+        software, data, and automation.
       </p>
       <p className="mb-2">
-        Outside of tech, I enjoy reading and writing novels, riding my bike, and listening to music pretty much all the time.
+        Outside of tech, I enjoy reading and writing novels, riding my bike, and
+        listening to music pretty much all the time.
       </p>
       <p>
-        I also like messing with new tools, contributing to open source, and thinking about how to build smarter systems.
+        I also like messing with new tools, contributing to open source, and
+        thinking about how to build smarter systems.
       </p>
     </div>
   ),
@@ -68,11 +73,15 @@ const COMMANDS = {
       <p className="mb-3 terminal-success">
         Here are some projects I'm working on and planning:
       </p>
-  
+
       {/* Terminal Portfolio */}
       <div className="mb-4">
-        <h3 className="terminal-warning font-bold">• Protfolio Website (Current)</h3>
-        <p className="ml-4">This site itself — built to feel like a real terminal</p>
+        <h3 className="terminal-warning font-bold">
+          • Protfolio Website (Current)
+        </h3>
+        <p className="ml-4">
+          This site itself — built to feel like a real terminal
+        </p>
         <p className="ml-4 text-sm terminal-gray">
           Tech: React, TypeScript, Tailwind CSS
         </p>
@@ -88,11 +97,15 @@ const COMMANDS = {
           </a>
         </p>
       </div>
-  
+
       {/* E-commerce Cart */}
       <div className="mb-4">
-        <h3 className="terminal-warning font-bold">• E-commerce Cart (Completed)</h3>
-        <p className="ml-4">A simple cart system for managing orders and items</p>
+        <h3 className="terminal-warning font-bold">
+          • E-commerce Cart (Completed)
+        </h3>
+        <p className="ml-4">
+          A simple cart system for managing orders and items
+        </p>
         <p className="ml-4 text-sm terminal-gray">Tech: Python (CLI-based)</p>
         <p className="ml-4">
           <span className="terminal-blue">→</span>{" "}
@@ -106,11 +119,15 @@ const COMMANDS = {
           </a>
         </p>
       </div>
-  
+
       {/* Inventory Manager */}
       <div className="mb-4">
-        <h3 className="terminal-warning font-bold">• Inventory Manager (Completed)</h3>
-        <p className="ml-4">CLI tool to manage stock, orders, and product listings</p>
+        <h3 className="terminal-warning font-bold">
+          • Inventory Manager (Completed)
+        </h3>
+        <p className="ml-4">
+          CLI tool to manage stock, orders, and product listings
+        </p>
         <p className="ml-4 text-sm terminal-gray">Tech: Python (CLI-based)</p>
         <p className="ml-4">
           <span className="terminal-blue">→</span>{" "}
@@ -124,53 +141,65 @@ const COMMANDS = {
           </a>
         </p>
       </div>
-  
+
       {/* ML Stock Predictor */}
       <div className="mb-4">
-        <h3 className="terminal-warning font-bold">• ML Stock Predictor (In Progress)</h3>
+        <h3 className="terminal-warning font-bold">
+          • ML Stock Predictor (In Progress)
+        </h3>
         <p className="ml-4">Real-time stock prediction using LSTM networks</p>
         <p className="ml-4 text-sm terminal-gray">
           Tech: Python, TensorFlow, Pandas, Streamlit
         </p>
         <p className="ml-4 terminal-info">→ Coming Soon</p>
       </div>
-  
+
       {/* Smart Home Assistant */}
       <div className="mb-4">
-        <h3 className="terminal-warning font-bold">• Smart Home Assistant (Planned)</h3>
-        <p className="ml-4">Home automation with voice control and ML-based predictions</p>
+        <h3 className="terminal-warning font-bold">
+          • Smart Home Assistant (Planned)
+        </h3>
+        <p className="ml-4">
+          Home automation with voice control and ML-based predictions
+        </p>
         <p className="ml-4 text-sm terminal-gray">
           Tech: Python, TensorFlow, Raspberry Pi, Arduino
         </p>
         <p className="ml-4 terminal-info">→ Planned for Q2 2026</p>
       </div>
-  
+
       {/* Game Bot */}
       <div className="mb-4">
-        <h3 className="terminal-warning font-bold">• Autonomous Game Bot (Planned)</h3>
+        <h3 className="terminal-warning font-bold">
+          • Autonomous Game Bot (Planned)
+        </h3>
         <p className="ml-4">AI bot that learns to play simple games using RL</p>
         <p className="ml-4 text-sm terminal-gray">
           Tech: Python, OpenAI Gym, PyTorch, Computer Vision
         </p>
         <p className="ml-4 terminal-info">→ Planned for Q3 2026</p>
       </div>
-  
+
       {/* Robotics Project */}
       <div className="mb-2">
-        <h3 className="terminal-warning font-bold">• Robotics Project (Planned)</h3>
-        <p className="ml-4">Autonomous robot with vision and basic path planning</p>
+        <h3 className="terminal-warning font-bold">
+          • Robotics Project (Planned)
+        </h3>
+        <p className="ml-4">
+          Autonomous robot with vision and basic path planning
+        </p>
         <p className="ml-4 text-sm terminal-gray">
           Tech: ROS, Python, OpenCV, Arduino, 3D Printing
         </p>
         <p className="ml-4 terminal-info">→ Planned for Q4 2026</p>
       </div>
-  
+
       <p className="mt-4 terminal-gray text-sm">
         Tip: I'm actively building and updating these. More to come soon.
       </p>
     </div>
   ),
-  
+
   skills: () => (
     <div className="terminal-output">
       <div className="mb-4">
@@ -213,7 +242,7 @@ const COMMANDS = {
 
       <div className="mb-2">
         <h3 className="terminal-success font-bold mb-2">
-        Hardware & Robotics (next focus):
+          Hardware & Robotics (next focus):
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 ml-4">
           <span className="terminal-purple">• Arduino</span>
@@ -728,7 +757,7 @@ export const Terminal = () => {
       className="h-screen bg-background text-foreground font-mono p-4 overflow-y-auto cursor-text"
       onClick={handleTerminalClick}
     >
-      <div className="max-w-4xl ml-8">
+      <div className="max-w-4xl ml-0 md:ml-8">
         {/* Terminal history */}
         {history.map((entry, index) => (
           <TerminalOutput
@@ -740,7 +769,9 @@ export const Terminal = () => {
 
         {/* Current prompt */}
         <div className="flex items-center">
-          <span className="terminal-prompt-user">utkarsh</span>
+          <span className="terminal-prompt-user text-sm md:text-base">
+            utkarsh
+          </span>
           <span className="terminal-prompt-symbol">@</span>
           <span className="terminal-prompt-host">portfolio</span>
           <span className="terminal-prompt-symbol">:</span>
@@ -766,7 +797,7 @@ export const Terminal = () => {
 
         {/* Autocomplete suggestions */}
         {suggestions.length > 0 && (
-          <div className="mt-1 ml-8">
+          <div className="mt-1 ml-0 md:ml-8">
             <div className="text-sm terminal-gray">
               Suggestions: {suggestions.join(", ")}
             </div>
