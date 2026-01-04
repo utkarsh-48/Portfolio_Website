@@ -7,7 +7,26 @@ A modern, interactive terminal-style portfolio built with React, TypeScript, and
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.5.3-blue)
 ![Vite](https://img.shields.io/badge/Vite-5.4.1-purple)
 
-## Features
+## AI Assistant (Shadow)
+
+This portfolio features an integrated AI assistant named **Shadow** powered by Google Gemini models. Shadow answers user questions, provides portfolio information, and responds in a friendly, sometimes witty manner.
+
+### AI Features
+
+- **Conversational AI**: Shadow can answer questions about Utkarsh, the portfolio, and general topics (with restrictions).
+- **Persona**: Shadow introduces itself and responds as your digital guide.
+- **Knowledge Base Restriction**: For questions about Utkarsh, Shadow only uses information from a curated knowledge base (`src/lib/knowledge.json`).
+- **Help Command**: Shadow always suggests using the `help` command or lists available actions when greeted or when the user seems lost.
+- **Model Selection**: You can choose between different Gemini models (e.g., `gemini-2.5-flash`, `gemini-2.5-flash-lite`, `gemini-2.5-pro`) for a balance of speed, cost, and capability. The model is set in `src/lib/llm.tsx`.
+- **Response Length Control**: The AI's response length is limited using the `maxOutputTokens` parameter for concise answers and efficient API usage.
+
+#### Example AI Response
+
+```
+🟣 Shadow: Hello there! I'm Shadow, your AI guide. Type 'help' to see what you can do here!
+```
+
+---
 
 ### Core Features
 
@@ -206,4 +225,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Star this repository if you liked it or found it helpful!**
-
