@@ -4,6 +4,7 @@
   "location": "India",
   "education": "BCA student",
   "focus": ["Machine Learning", "Backend", "Robotics", "ML Ops"],
+  "hobbies": ["Bike rides","Gaming", "Reading", "Reseaching new topics"],
   "projects": [
     {
       "name": "Portfolio Website",

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { TerminalOutput } from "./TerminalOutput";
 import { BootSequence } from "./BootSequence";
 import { useTerminalSounds } from "../hooks/useTerminalSounds";
+import { askAI } from "@/lib/llm";
 interface HistoryEntry {
   command: string;
   output: React.ReactNode;
@@ -633,9 +634,44 @@ export const Terminal = () => {
     } else if (COMMANDS[trimmedCmd as keyof typeof COMMANDS]) {
       output = COMMANDS[trimmedCmd as keyof typeof COMMANDS]();
     } else {
-      output = (
-        <span className="terminal-error">nuh uh, that's not available</span>
-      );
+      // AI fallback for unknown commands
+      output = <span className="terminal-info">Thinking...</span>;
+      const newEntry: HistoryEntry = {
+        command: cmd,
+        output,
+        timestamp: new Date(),
+      };
+      setHistory((prev) => [...prev, newEntry]);
+      try {
+        const aiResponse = await askAI(cmd);
+        const aiOutput: React.ReactNode = (
+          <span className="terminal-ai-response">{aiResponse}</span>
+        );
+        setHistory((prev) => {
+          // Replace the last entry ("Thinking...") with the AI response
+          const updated = [...prev];
+          updated[updated.length - 1] = {
+            ...newEntry,
+            output: aiOutput,
+          };
+          return updated;
+        });
+      } catch (err) {
+        setHistory((prev) => {
+          const updated = [...prev];
+          updated[updated.length - 1] = {
+            ...newEntry,
+            output: (
+              <span className="terminal-error">
+                AI error: Could not get a response.
+              </span>
+            ),
+          };
+          return updated;
+        });
+      }
+      setIsLoading(false);
+      return;
     }
     const newEntry: HistoryEntry = {
       command: cmd,
